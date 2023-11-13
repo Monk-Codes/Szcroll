@@ -1,0 +1,75 @@
+:root {
+ --primary-color: #f8ff00;
+ --secondary-color: #3ad59f;
+ --text: #eee;
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ height: 100vh;
+ background: url(https://i.gifer.com/3EME.gif);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ overflow: hidden;
+ width: 100%;
+}
+#canvas1 {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.controls {
+ padding: 4rem;
+ position: absolute;
+ z-index: 1;
+ top: 0;
+ left: 12rem;
+ transform: translateX(-50%);
+ color: var(--secondary-color);
+ font-family: monospace;
+ font-size: 1.5rem;
+ border-radius: 50%;
+}
+option {
+ color: var(--text);
+ font-family: monospace;
+ font-size: 1.5rem;
+}
+select {
+ border-radius: 20px;
+ text-align: center;
+ border: none;
+ padding: 4px;
+ appearance: none;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ background-color: var(--secondary-color);
+ cursor: pointer;
+ box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+ appearance: none;
+ outline: none;
+ font-size: 2rem;
+ color: var(--text);
+}
+@media only screen and (max-width: 480px) {
+ canvas {
+  width: 100%;
+  padding: 4rem;
+ }
+ .controls {
+  left: 7rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+ }
+ select {
+  font-size: 0.8rem;
+ }
+ option {
+  font-size: 0.5rem;
+ }
+}
